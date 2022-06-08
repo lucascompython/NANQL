@@ -20,6 +20,12 @@ take 1
 git clone https://github.com/lucascompython/NANQL.git
 cd "NANQL/Query Language"
 dotnet run -- query.nanql data.json
+# OUTPUT
+{ Title = "The Fellowship of the Ring"
+  Author = "J.R.R. Tolkien"
+  Category = "Fantasy"
+  PublishYear = 1954
+  Rating = 4.36 }
 ```
 
 
