@@ -1,0 +1,3 @@
+﻿filterby Category = 'Fantasy'
+orderby Rating asc
+take 1
