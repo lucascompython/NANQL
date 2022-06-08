@@ -19,7 +19,7 @@ take 1
 ```powershell
 git clone https://github.com/lucascompython/NANQL.git
 cd "NANQL/Query Language"
-dotnet run -- query.nanql data.json
+dotnet run -- query.nanql data.json #use --help to see more details
 # OUTPUT
 { Title = "The Fellowship of the Ring"
   Author = "J.R.R. Tolkien"
