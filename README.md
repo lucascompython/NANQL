@@ -18,7 +18,7 @@ take 1
 
 ```powershell
 git clone https://github.com/lucascompython/NANQL.git
-cd NANQL/Query\ Language
+cd "NANQL/Query Language"
 dotnet run -- query.nanql data.json
 ```
 
