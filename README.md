@@ -18,7 +18,7 @@ take 1
 
 ```powershell
 git clone https://github.com/lucascompython/NANQL.git
-cd NANQL
+cd NANQL/Query\ Language
 dotnet run -- query.nanql data.json
 ```
 
@@ -26,7 +26,7 @@ dotnet run -- query.nanql data.json
 
 ## CAUTION
 
-In this example, I'm using a Book's record with it's own member (look [here](Program.fs#L9)), if you want to use a different "object", for now you need to change the Record in the Program.fs file.
+In this example, I'm using a Book's record with it's own member (look [here](Query%20Language/Program.fs#L9)), if you want to use a different "object", for now you need to change the Record in the Program.fs file.
 
 
 ## TODOs
