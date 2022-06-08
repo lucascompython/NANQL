@@ -32,7 +32,7 @@ dotnet run -- query.nanql data.json #use --help to see more details
 
 ## CAUTION
 
-In this example, I'm using a Book's record with it's own member (look [here](Query%20Language/Program.fs#L9)), if you want to use a different "object", for now you need to change the Record in the Program.fs file.
+In this example, I'm using a Book's record with it's own member (look [here](Query%20Language/Program.fs#L7)), if you want to use a different "object", for now you need to change the Record in the Program.fs file.
 
 
 ## TODOs

@@ -3,7 +3,7 @@ open System.Text.Json
 open System
 
 
-// PUT INSIDE THIS RECORD THE MEMBERS
+// CHANGE ONLY THE MEMBERS OF THIS TYPE
 type Things = {
     Title : string
     Author : string
