@@ -9,7 +9,6 @@
   <ItemGroup>
     <None Include="teste.nanql" />
     <Content Include="data.json" />
-    <Compile Include="Books.fs" />
     <Compile Include="Query.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

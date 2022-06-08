@@ -1,9 +1,7 @@
 ﻿open Query
-open Books
 open System.Text.Json
 open System
 
-let books = Books.getAll()
 
 // PUT INSIDE THIS RECORD THE MEMBERS
 type Things = {
