@@ -19,10 +19,12 @@ take 1
 ```powershell
 git clone https://github.com/lucascompython/NANQL.git
 cd "NANQL/Query Language"
+# Use ./install_globally to install globally as a dotnet package
+
 dotnet run -- query.nanql data.json #use --help to see more details
 
-#or with no arguments to input the query inside the program
-#dotnet run --
+# Or with no arguments to input the query inside the program
+# dotnet run --
 
 # OUTPUT
 { Title = "The Fellowship of the Ring"
