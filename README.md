@@ -47,9 +47,9 @@ In this example, I'm using a Book's record with it's own member (look [here](Que
 ## TODOs
 
 - [X] Add "interactive" mode
+- [X] Add a binary release
 - [ ] Add support for building the project with powershell helper
 - [ ] Add the package to NuGet
-- [ ] Add a binary release
 - [ ] Polish the output
 - [ ] Add some more complex queries, for example let's say you have this piece of json: `[{"x": 2, "y": 0}, {"x": 3, "y": 1}, {"x": 4, "y": 1}]`, I wan't to add something like `SUM(X) WHERE Y > 0     (would equate to 7)` and `LIST(X) WHERE Y > 0    (would equate to [3,4])`
 - [ ] Making the act of change the type of the object easier.
