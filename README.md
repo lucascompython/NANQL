@@ -14,17 +14,19 @@ orderby Rating asc
 take 1
 ```
 
+
+## How to get it
+
+You can get it from just cloning this repository and then running it (`git clone https://github.com/lucascompython/NANQL.git && cd NANQL/NANQL && dotnet run`).<br />
+Or you can clone this repository and then install it globally as a dotnet package (`./install_globally.ps1`) <br />
+Or download the executables [here](https://github.com/lucascompython/NANQL/releases/tag/Executables).
+
 ## How to use it
 
 ```powershell
-git clone https://github.com/lucascompython/NANQL.git
-cd "NANQL/Query Language"
-# Use ./install_globally to install globally as a dotnet package
+nanql quary.nanql data.json # use --help to see more details
 
-dotnet run -- query.nanql data.json #use --help to see more details
-
-# Or with no arguments to input the query inside the program
-# dotnet run --
+# or with no arguments to input the query inside the program
 
 # OUTPUT
 { Title = "The Fellowship of the Ring"
@@ -44,6 +46,7 @@ In this example, I'm using a Book's record with it's own member (look [here](Que
 ## TODOs
 
 - [X] Add "interactive" mode
+- [ ] Add support for building the project with powershell helper
 - [ ] Add a binary release
 - [ ] Polish the output
 - [ ] Add some more complex queries, for example let's say you have this piece of json: `[{"x": 2, "y": 0}, {"x": 3, "y": 1}, {"x": 4, "y": 1}]`, I wan't to add something like `SUM(X) WHERE Y > 0     (would equate to 7)` and `LIST(X) WHERE Y > 0    (would equate to [3,4])`
