@@ -18,8 +18,8 @@ take 1
 ## How to get it
 
 You can get it from just cloning this repository and then running it (`dotnet run`).<br />
-Or you can clone this repository and then install it globally as a dotnet package (`./install_globally.ps1`) <br />
-Or download the executables [here](https://github.com/lucascompython/NANQL/releases).
+Or you can clone this repository and then install it globally as a dotnet package (`./install_globally.ps1`) and then just use `nanql`<br />
+Or download the executable [here](https://github.com/lucascompython/NANQL/releases) and then you can just use that file.
 
 ## How to use it
 
