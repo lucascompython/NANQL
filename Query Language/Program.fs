@@ -23,13 +23,29 @@ let interpret lst result =
 let main (args) = 
     
     if args.Length < 1 then
-        printfn "No file was specified..."
+        printfn "Interactive mode!"
+        printf "Enter the json file to query: "
+        let fileName = Console.ReadLine()
+        let reader = System.IO.File.ReadAllText(fileName)
+        let jsonInput = JsonSerializer.Deserialize<Things list>(reader) 
+        let mutable inputs: string list = []
+        let mutable Break = false
+        while not Break do 
+            printf "> "
+            let input = Console.ReadLine()
+            if input = "" then 
+                Break <- true
+            inputs <- input :: inputs
+        let NANQLInput = String.Join (Environment.NewLine, inputs)
+        
+
+        NANQLInput |> parse |> interpret jsonInput
     
     elif args.Length > 2 then
         printfn "Too many arguments were given..."
 
     elif Array.contains args[0] [| "-h" ; "--help" |] then
-        printfn "This program expects two arguments, the first one being the NANQL file and the other being the json file."
+        printfn "This program expects two arguments, the first one being the NANQL file and the other being the json file. OR you can pass zero arguments to use 'interactive' mode."
     else
         
         printfn "Interpreting %A with %A" args[0] args[1]
