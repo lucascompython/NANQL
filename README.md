@@ -24,6 +24,7 @@ Or download the executable [here](https://github.com/lucascompython/NANQL/releas
 ## How to use it
 
 ```powershell
+# this example is using the files found in the NANQL directory
 nanql quary.nanql data.json # use --help to see more details
 
 # or with no arguments to input the query inside the program
