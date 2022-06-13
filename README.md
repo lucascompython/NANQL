@@ -19,7 +19,7 @@ take 1
 
 You can get it from just cloning this repository and then running it (`git clone https://github.com/lucascompython/NANQL.git && cd NANQL/NANQL && dotnet run`).<br />
 Or you can clone this repository and then install it globally as a dotnet package (`./install_globally.ps1`) <br />
-Or download the executables [here](https://github.com/lucascompython/NANQL/releases/tag/Executables).
+Or download the executables [here](https://github.com/lucascompython/NANQL/releases).
 
 ## How to use it
 
