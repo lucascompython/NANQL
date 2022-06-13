@@ -17,7 +17,7 @@ take 1
 
 ## How to get it
 
-You can get it from just cloning this repository and then running it (`git clone https://github.com/lucascompython/NANQL.git && cd NANQL/NANQL && dotnet run`).<br />
+You can get it from just cloning this repository and then running it (`dotnet run`).<br />
 Or you can clone this repository and then install it globally as a dotnet package (`./install_globally.ps1`) <br />
 Or download the executables [here](https://github.com/lucascompython/NANQL/releases).
 
@@ -47,6 +47,7 @@ In this example, I'm using a Book's record with it's own member (look [here](Que
 
 - [X] Add "interactive" mode
 - [ ] Add support for building the project with powershell helper
+- [ ] Add the package to NuGet
 - [ ] Add a binary release
 - [ ] Polish the output
 - [ ] Add some more complex queries, for example let's say you have this piece of json: `[{"x": 2, "y": 0}, {"x": 3, "y": 1}, {"x": 4, "y": 1}]`, I wan't to add something like `SUM(X) WHERE Y > 0     (would equate to 7)` and `LIST(X) WHERE Y > 0    (would equate to [3,4])`
