@@ -1,5 +1,5 @@
-Query Language/bin
-Query Language/obj
-Query Language/Properties
-Query Language/Books.fs
+NANQL/bin
+NANQL/obj
+NANQL/Properties
+NANQL/Books.fs
 .vs

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Query Language", "Query Language\Query Language.fsproj", "{9463151A-0D0F-44FB-B196-6D0A6F6D3636}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "NANQL", "Query Language\NANQL.fsproj", "{9463151A-0D0F-44FB-B196-6D0A6F6D3636}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
