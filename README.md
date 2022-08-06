@@ -3,7 +3,7 @@
 
 ## What is NANQL?
 
-NANQL is yet another simple (and quit normal) query language for json, that I made to learn better about parsers and F#. <br />
+NANQL is yet another simple (and quite normal) query language for json, that I made to learn better about parsers and F#. <br />
 It's syntax is very declarative and easy to understand (just like SQL).
 
 ## Code Preview
