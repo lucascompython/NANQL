@@ -13,6 +13,7 @@
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <PackageLicenceFile>LICENSE</PackageLicenceFile>
     <PAckageRequireLicenseAcceptance>true</PAckageRequireLicenseAcceptance>
+    <AssemblyName>nanql</AssemblyName>
 	
   </PropertyGroup>
 
