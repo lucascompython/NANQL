@@ -28,10 +28,8 @@
 
 
   <PropertyGroup>
-    <PublishAot>true</PublishAot>
     <StripSymbols>true</StripSymbols>
     <DebugType>none</DebugType>
-    <optimize>true</optimize>
   </PropertyGroup>
 
 </Project>
