@@ -37,6 +37,16 @@
   </ItemGroup>
 
 
+  <ItemGroup>
+    <None Include="..\Examples\data.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+    <None Include="..\Examples\query.nanql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+  
   <PropertyGroup>
     <StripSymbols>true</StripSymbols>
     <DebugType>none</DebugType>
