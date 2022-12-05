@@ -45,7 +45,7 @@ nanql quary.nanql data.json # use --help to see more details
   Rating = 4.36 }
 ```
 -->
-Check the [examples](https://github.com/lucascompython/NANQL/Examples).
+Check the [examples](https://github.com/lucascompython/NANQL/tree/master/Examples).
 
 ## TODOs
 
