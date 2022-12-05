@@ -14,8 +14,15 @@
     <PackageLicenceFile>LICENSE</PackageLicenceFile>
     <PAckageRequireLicenseAcceptance>true</PAckageRequireLicenseAcceptance>
     <AssemblyName>nanql</AssemblyName>
-	
   </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>embedded</DebugType>
+	</PropertyGroup>	
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DebugType>none</DebugType>
+	</PropertyGroup>
 
   <ItemGroup>
     <Compile Include="Query.fs" />
