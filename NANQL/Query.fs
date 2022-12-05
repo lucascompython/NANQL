@@ -2,6 +2,7 @@
 
 open FParsec
 open System
+open FSharp.Data
 
 type BinaryExprKind =
     | Add
@@ -100,30 +101,44 @@ let parse input =
         | Success (res, _, _) -> Result.Ok res
         | Failure (err, _, _) -> Result.Error err
 
-let execute query source =
-    let rec evaluate expr element =
+let execute query source: JsonValue list =
+    let rec evaluate expr (element: JsonValue) =
         match expr with
             | IntLiteral i -> i :> obj
             | FloatLiteral f -> f :> obj
             | StringLiteral s -> s :> obj
-            | Identifier n -> element.GetType().GetProperty(n).GetValue(element)
+            | Identifier n -> 
+                let value = element[n]
+                match value with
+                | JsonValue.String s -> s :> obj
+                | JsonValue.Boolean b -> b :> obj
+                | JsonValue.Array a -> a :> obj
+                | JsonValue.Float f -> f :> obj
+                | JsonValue.Record r -> r :> obj
+                | JsonValue.Null -> null :> obj
+                | JsonValue.Number ij -> ij :> obj                    
+                
+               
             | Binary (left, right, kind) ->
                 let leftEvaluated = evaluate left element
                 let rightEvaluated = evaluate right element
+                
 
                 match kind with
-                    | Add -> (leftEvaluated :?> float) + (rightEvaluated :?> float) :> obj
-                    | Subtract -> (leftEvaluated :?> float) - (rightEvaluated :?> float) :> obj
-                    | Multiply -> (leftEvaluated :?> float) * (rightEvaluated :?> float) :> obj
-                    | Divide -> (leftEvaluated :?> float) / (rightEvaluated :?> float) :> obj
+                    | Add -> (System.Convert.ToSingle(leftEvaluated)) + (System.Convert.ToSingle(rightEvaluated)) :> obj
+                    | Subtract -> (System.Convert.ToSingle(leftEvaluated)) - (System.Convert.ToSingle(rightEvaluated)) :> obj
+                    | Multiply -> (System.Convert.ToSingle(leftEvaluated)) * (System.Convert.ToSingle(rightEvaluated)) :> obj
+                    | Divide -> (System.Convert.ToSingle(leftEvaluated)) / (System.Convert.ToSingle(rightEvaluated)) :> obj
                     | And -> (leftEvaluated :?> bool && rightEvaluated:?> bool) :> obj
                     | Or -> (leftEvaluated :?> bool || rightEvaluated:?> bool) :> obj
+                    // TODO URGENT FIX Equals doesnt work with numbers
                     | Equals -> leftEvaluated = rightEvaluated :> obj
                     | NotEquals -> not (leftEvaluated = rightEvaluated) :> obj
-                    | GreaterThan -> (leftEvaluated :?> IComparable) > (rightEvaluated :?> IComparable) :> obj
-                    | GreaterThanOrEquals -> (leftEvaluated :?> IComparable) >= (rightEvaluated :?> IComparable) :> obj
-                    | LesserThan -> (leftEvaluated :?> IComparable) < (rightEvaluated :?> IComparable) :> obj
-                    | LesserThanOrEquals -> (leftEvaluated :?> IComparable) <= (rightEvaluated :?> IComparable) :> obj
+                    | GreaterThan -> (System.Convert.ToSingle(leftEvaluated)) > (System.Convert.ToSingle(rightEvaluated)) :> obj
+
+                    | GreaterThanOrEquals -> (System.Convert.ToSingle(leftEvaluated)) >= (System.Convert.ToSingle(rightEvaluated)) :> obj
+                    | LesserThan -> (System.Convert.ToSingle(leftEvaluated)) < (System.Convert.ToSingle(rightEvaluated)) :> obj
+                    | LesserThanOrEquals -> (System.Convert.ToSingle(leftEvaluated)) <= (System.Convert.ToSingle(rightEvaluated)) :> obj
 
     let applyFilter expr lst =
         List.filter (fun i -> evaluate expr i :?> bool) lst

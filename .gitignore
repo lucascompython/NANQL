@@ -4,3 +4,5 @@ NANQL/Properties
 NANQL/Books.fs
 .vs
 NANQL/NANQL.fsproj.user
+
+.fake

@@ -1,16 +1,6 @@
 ﻿open Query
-open System.Text.Json
 open System
-
-
-// CHANGE ONLY THE MEMBERS OF THIS TYPE
-type Things = {
-    Title : string
-    Author : string
-    Category : string
-    PublishYear : int
-    Rating : float
-}
+open FSharp.Data
 
 let interpret lst result = 
     match result with
@@ -21,13 +11,12 @@ let interpret lst result =
 
 [<EntryPoint>]
 let main (args) = 
-    
     if args.Length < 1 then
         printfn "Interactive mode!"
         printf "Enter the json file to query: "
-        let fileName = Console.ReadLine()
-        let reader = System.IO.File.ReadAllText(fileName)
-        let jsonInput = JsonSerializer.Deserialize<Things list>(reader) 
+        let fileName: string = Console.ReadLine()
+        let jsonInput = JsonValue.Load(fileName).AsArray() |> Array.toList
+        
         let mutable inputs: string list = []
         let mutable Break = false
         while not Break do 
@@ -49,14 +38,11 @@ let main (args) =
     else
         
         printfn "Interpreting %A with %A" args[0] args[1]
-        
-        let reader = System.IO.File.ReadAllText(args[1])
-        let jsonInput = JsonSerializer.Deserialize<Things list>(reader)
+
+        let jsonInput = JsonValue.Load(args[1]).AsArray() |> Array.toList
         
         let NANQLInput = System.IO.File.ReadAllText(args[0])
 
-
-        
         NANQLInput |> parse |> interpret jsonInput
 
     0

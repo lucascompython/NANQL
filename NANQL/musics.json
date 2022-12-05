@@ -1,0 +1,38 @@
+[
+    {
+        "Title": "Billie Jean",
+        "Artist": "Michael Jackson",
+        "Album": "Thriller",
+        "Year": 1982
+    },
+    {
+        "Title": "Smooth Criminal",
+        "Artist": "Michael Jackson",
+        "Album": "Bad",
+        "Year": 1987
+    },
+    {
+        "Title":  "Star Shopping",
+        "Artist": "Lil Peep",
+        "Album": "Come Over When You're Sober, Pt. 1",
+        "Year": 2017
+    },
+    {
+        "Title": "The Less I Know The Better",
+        "Artist": "Tame Impala",
+        "Album": "Currents",
+        "Year": 2015
+    },
+    {
+        "Title": "Purple Rain",
+        "Artist": "Prince",
+        "Album": "Purple Rain",
+        "Year": 1984
+    },
+    {
+        "Title": "Location",
+        "Artist": "Playboi Carti",
+        "Album": "Die Lit",
+        "Year": 2018
+    }
+]
