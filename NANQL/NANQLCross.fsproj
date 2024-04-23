@@ -8,9 +8,8 @@
     <Description>Not a Normal Query Language</Description>
     <FileDescription>Not a Normal Query Language</FileDescription>
     <RootNamespace>NANQL</RootNamespace>
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>nanql</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <!-- <PackAsTool>true</PackAsTool>
+    <ToolCommandName>nanql</ToolCommandName> -->
     <PackageLicenceFile>LICENSE</PackageLicenceFile>
     <PAckageRequireLicenseAcceptance>true</PAckageRequireLicenseAcceptance>
     <AssemblyName>nanql</AssemblyName>

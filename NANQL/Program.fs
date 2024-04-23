@@ -15,7 +15,7 @@ let interpret lst result =
 
 [<EntryPoint>]
 let main (args) = 
-    if Array.contains args[0] [| "--version"; "-v" |] then
+    if args.Length >= 1 && Array.contains args[0] [| "--version"; "-v" |] then
         printfn "NANQL version %s" VERSION
         exit 0
     if args.Length < 1 then
@@ -29,13 +29,16 @@ let main (args) =
         while not Break do 
             printf "> "
             let input = Console.ReadLine()
-            if input = "" then 
-                Break <- true
-            inputs <- input :: inputs
-        let NANQLInput = String.Join (Environment.NewLine, inputs)
-        
+            match input with
+            | "/quit" -> Break <- true
+            | "/clear" -> inputs <- []
+            | "/run" -> 
+                let NANQLInput = String.Join (Environment.NewLine, inputs)
+                NANQLInput |> parse |> interpret jsonInput
+                inputs <- []
+            | "/help" -> printfn "Commands: /quit, /clear, /run, /help"
+            | _ -> inputs <- input :: inputs
 
-        NANQLInput |> parse |> interpret jsonInput
     
     elif args.Length > 2 then
         printfn "Too many arguments were given..."

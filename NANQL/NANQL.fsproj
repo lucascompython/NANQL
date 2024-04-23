@@ -2,18 +2,17 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Version>0.2.0</Version>
     <Authors>Lucas de Linhares</Authors>
     <Description>Not a Normal Query Language</Description>
     <FileDescription>Not a Normal Query Language</FileDescription>
     <RootNamespace>NANQL</RootNamespace>
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>nanql</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
-    <PackageLicenceFile>LICENSE</PackageLicenceFile>
+    <!-- <PackAsTool>true</PackAsTool>
+    <ToolCommandName>nanql</ToolCommandName> -->
+    <!-- <PackageLicenceFile>LICENSE</PackageLicenceFile>
     <PAckageRequireLicenseAcceptance>true</PAckageRequireLicenseAcceptance>
-    <AssemblyName>nanql</AssemblyName>
+    <AssemblyName>nanql</AssemblyName> -->
   </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -48,6 +47,7 @@
     <StripSymbols>true</StripSymbols>
     <DebugType>none</DebugType>
     <optimize>true</optimize>
+    <OptimizationPreference>Speed</OptimizationPreference>
   </PropertyGroup>
 
 </Project>
